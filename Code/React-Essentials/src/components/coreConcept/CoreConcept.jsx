@@ -1,6 +1,6 @@
 import "./CoreConcept.css";
 
-export function CoreConcept(props) {
+export default function CoreConcept(props) {
   return (
     <li>
       <img src={props.image} alt={props.title} />
