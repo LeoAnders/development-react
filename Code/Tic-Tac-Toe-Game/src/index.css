@@ -18,23 +18,17 @@ html {
 }
 
 body {
-  background: rgb(0, 0, 0);
+  background: rgb(24, 24, 24);
 }
 
 header {
   text-align: center;
 }
 
-header img {
-  width: 8rem;
-  object-fit: contain;
-  margin: 3rem auto 1rem auto;
-  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.4));
-}
-
 h1 {
-  font-family: "Caprasimo", cursive;
+  font-family: "Times New Roman", Times, serif;
   font-size: 3rem;
+  text-align: center;
   margin: 0 auto 3rem auto;
   color: #b8b8b8;
 }
@@ -44,8 +38,9 @@ h1 {
   margin: 3rem auto;
   padding: 2rem;
   border-radius: 6px;
-  background: linear-gradient(#383624, #282617);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  background-color: none;
+  border: 0.5px solid rgb(117, 117, 117);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   position: relative;
 }
 
@@ -67,29 +62,29 @@ h1 {
 }
 
 #players.highlight-player li.active {
-  border-color: #f6e35a;
+  border-color: #b8b8b8;
   animation: pulse 2s infinite ease-in-out;
 }
 
 #players.highlight-player li.active .player-name,
 #players.highlight-player li.active .player-symbol {
-  color: #f6e35a;
+  color: #b8b8b8;
 }
 
 #players button {
   width: 3rem;
   border: none;
   background: none;
-  color: #c3ba78;
+  color: #b8b8b8;
   font-size: 0.9rem;
   cursor: pointer;
-  transition: color 0.2s;
+  transition: color 0.3s;
   padding: 0.5rem 0.25rem 0.25rem 0.25rem;
   text-align: center;
 }
 
 #players button:hover {
-  color: #f8ca31;
+  color: #e0e0e0;
 }
 
 .player {
@@ -116,10 +111,10 @@ h1 {
   font: inherit;
   font-size: 1rem;
   width: 10rem;
-  border: none;
   padding: 0.5rem;
-  animation: pulse-text 2s infinite;
-  background-color: #46432f;
+  animation: pulse-text 3s infinite;
+  background: rgb(24, 24, 24);
+  border: 0.5px solid rgb(117, 117, 117);
   text-align: center;
   text-transform: uppercase;
 }
@@ -143,11 +138,10 @@ ol {
 #pre-game button {
   cursor: pointer;
   background: none;
-  color: #f8c031;
+  color: #e1dec7;
   border: none;
   font-family: "Caprasimo", cursive;
   font-size: 4rem;
-  text-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
   animation: pulse-text-size 2s infinite ease-out;
 }
 
@@ -174,11 +168,13 @@ ol {
   width: 8rem;
   height: 8rem;
   border: none;
-  background: #aca788;
-  color: #3f3b00;
+  background: none;
+  border-radius: 5px;
+  border: 0.5px solid rgb(117, 117, 117);
+  color: #b5b5b5;
   font-size: 5rem;
   cursor: pointer;
-  font-family: "Caprasimo", cursive;
+  font-family: "Times New Roman", Times, serif;
   padding: 1rem;
 }
 
@@ -200,7 +196,7 @@ ol {
   font-family: "Caprasimo", cursive;
   font-size: 4rem;
   text-align: center;
-  color: #fcd256;
+  color: #e1dec7;
   margin: 0;
 }
 
@@ -215,20 +211,18 @@ ol {
   margin: 0 auto;
   font-size: 1.5rem;
   background: none;
-  border: 2px solid #fcd256;
-  color: #fcd256;
+  border: 2px solid #e1dec7;
+  color: #e1dec7;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.2s, color 0.2s;
-  box-shadow: 0 0 8px rgba(255, 187, 0, 0.4);
 }
 
 #game-over button:hover {
-  background: #fcd256;
+  background: #e1dec7;
   color: #3f3b00;
   transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(255, 187, 0, 0.8);
 }
 
 #log {
@@ -247,7 +241,7 @@ ol {
 }
 
 #log li.highlighted {
-  background-color: #3f3b00;
+  background-color: #e1dec7;
   color: white;
 }
 
@@ -272,7 +266,7 @@ ol {
   cursor: pointer;
   border: none;
   background: transparent;
-  color: #23221f;
+  color: #e1dec7;
   font: inherit;
   margin-top: 1.5rem;
 }
@@ -290,13 +284,13 @@ ol {
 
 @keyframes pulse-text {
   0% {
-    color: #e1dec7;
+    color: #cdcdcd;
   }
   50% {
-    color: #9f9d83;
+    color: #b3b2b2;
   }
   100% {
-    color: #e1dec7;
+    color: #8f8d8d;
   }
 }
 
@@ -314,16 +308,16 @@ ol {
 
 @keyframes pulse {
   0% {
-    border-color: #f6e35a;
-    box-shadow: 0 0 0 0 rgba(246, 227, 90, 0.4);
+    border-color: #6d6d6d;
+    box-shadow: 0 0 0 0 rgba(62, 62, 60, 0.4);
   }
   50% {
-    border-color: #f8c031;
-    box-shadow: 0 0 0 0.5rem rgba(248, 165, 49, 0);
+    border-color: #565656;
+    box-shadow: 0 0 0 0.5rem rgba(28, 26, 24, 0);
   }
   100% {
-    border-color: #f6e35a;
-    box-shadow: 0 0 0 0 rgba(246, 227, 90, 0);
+    border-color: #393939;
+    box-shadow: 0 0 0 0 rgba(25, 24, 20, 0);
   }
 }
 
